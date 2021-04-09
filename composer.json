@@ -1,0 +1,15 @@
+{
+    "name": "ashhitch/wp-graphql-redirectiono",
+    "description": "Query Redirection data with wp-graphql",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Ash Hitchcock",
+            "email": "hello@ashleyhitchcock.co.uk"
+        }
+    ],
+    "suggest": {
+        "wp-graphql/wp-graphql": "Required to return data via GraphQl"
+    }
+}
