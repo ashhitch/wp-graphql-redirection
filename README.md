@@ -1,6 +1,8 @@
 # WPGraphQl Redirection Plugin
 
-Add WPGraphQl support for redirects made using the popular [Redirection Plugin](https://wordpress.org/plugins/redirection/)
+![WPGraphQl Redirection Plugin](./banner.png)
+
+Add WPGraphQl support for redirects made using the popular [Redirection Plugin](https://en-gb.wordpress.org/plugins/redirection/)
 
 ## Quick Install
 
