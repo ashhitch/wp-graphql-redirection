@@ -1,5 +1,5 @@
 {
-    "name": "ashhitch/wp-graphql-redirectiono",
+    "name": "ashhitch/wp-graphql-redirection",
     "description": "Query Redirection data with wp-graphql",
     "type": "wordpress-plugin",
     "license": "GPL-3.0-or-later",
