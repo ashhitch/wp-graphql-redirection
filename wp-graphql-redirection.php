@@ -8,7 +8,7 @@
  * Author URI:      https://www.ashleyhitchcock.com
  * Text Domain:     wp-graphql-redirection
  * Domain Path:     /languages
- * Version:         0.0.2
+ * Version:         0.0.3
  *
  * @package         WP_Graphql_REDIRECTION
  */
@@ -71,6 +71,7 @@ add_action('graphql_init', function () {
                 'code' => ['type' => 'Int'],
                 'groupId' => ['type' => 'Int'],
                 'groupName' => ['type' => 'String'],
+                'matchType' => ['type' => 'String'],
             ],
         ]);
 
@@ -116,6 +117,7 @@ add_action('graphql_init', function () {
                             'type' => $row->action_type,
                             'groupId' => $row->group_id,
                             'groupName' => $row->name,
+                            'matchType' => $row->match_type,
                         ];
                     }
                     

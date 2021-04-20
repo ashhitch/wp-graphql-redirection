@@ -8,15 +8,13 @@ Add WPGraphQl support for redirects made using the popular [Redirection Plugin](
 
 -   Install & activate [WPGraphQL](https://www.wpgraphql.com/)
 -   Install from the [WordPress Plugin Directory](https://wordpress.org/plugins/add-wpgraphql-redirection/)
--   or Clone or download the zip of this repository into your WordPress plugin directory & activate the  plugin
-
+-   or Clone or download the zip of this repository into your WordPress plugin directory & activate the plugin
 
 ## Composer
 
 ```
 composer require ashhitch/wp-graphql-redirection
 ```
-
 
 ## Example Query
 
@@ -28,6 +26,7 @@ redirection {
     origin
     target
     type
+    matchType
   }
 }
 ```
