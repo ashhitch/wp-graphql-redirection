@@ -72,6 +72,7 @@ add_action('graphql_init', function () {
                 'groupId' => ['type' => 'Int'],
                 'groupName' => ['type' => 'String'],
                 'matchType' => ['type' => 'String'],
+                'regex' => ['type' => 'Boolean'],
             ],
         ]);
 
@@ -118,6 +119,7 @@ add_action('graphql_init', function () {
                             'groupId' => $row->group_id,
                             'groupName' => $row->name,
                             'matchType' => $row->match_type,
+                            'regex' => $row->regex,
                         ];
                     }
                     
