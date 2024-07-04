@@ -1,16 +1,17 @@
 <?php // phpcs:ignore
 
 /**
- * Plugin Name:     Add WPGraphQL Redirection
- * Plugin URI:      https://github.com/ashhitch/wp-graphql-redirection
- * Description:     A WPGraphQL Extension that adds WPGraphQL support support for Redirection plugin
- * Author:          Ash Hitchcock
- * Author URI:      https://www.ashleyhitchcock.com
- * Text Domain:     wp-graphql-redirection
- * Domain Path:     /languages
- * Version:         0.0.3
+ * Plugin Name:         Add WPGraphQL Redirection
+ * Plugin URI:          https://github.com/ashhitch/wp-graphql-redirection
+ * Description:         A WPGraphQL Extension that adds WPGraphQL support support for Redirection plugin
+ * Author:              Ash Hitchcock
+ * Author URI:          https://www.ashleyhitchcock.com
+ * Text Domain:         wp-graphql-redirection
+ * Domain Path:         /languages
+ * Version:             0.0.3
+ * Requires Plugins:    redirection, wp-graphql
  *
- * @package         WP_Graphql_REDIRECTION
+ * @package             WP_Graphql_REDIRECTION
  */
 
 if (!defined('ABSPATH')) {
