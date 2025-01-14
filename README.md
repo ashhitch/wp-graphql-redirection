@@ -30,3 +30,6 @@ redirection {
   }
 }
 ```
+## Find this useful?
+
+<a href="https://www.buymeacoffee.com/ashhitch" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 40px !important;width: auto !important;" ></a>
