@@ -6,9 +6,10 @@
  * Description:     A WPGraphQL Extension that adds WPGraphQL support support for Redirection plugin
  * Author:          Ash Hitchcock
  * Author URI:      https://www.ashleyhitchcock.com
- * Text Domain:     wp-graphql-redirection
- * Domain Path:     /languages
- * Version:         0.0.3
+ * Text Domain:     add-wpgraphql-redirection
+ * Version:         0.0.4
+ * License:         GPLv2 or later
+ * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  *
  * @package         WP_Graphql_REDIRECTION
  */
@@ -32,7 +33,7 @@ add_action('admin_init', function () {
         <div class="notice notice-error">
             <p><?php esc_html_e(
                     'The WPGraphQL Redirection plugin can\'t be loaded because these dependencies are missing:',
-                    'wp-graphql-redirection'
+                    'add-wpgraphql-redirection'
                 ); ?>
             </p>
             <ul>
@@ -62,7 +63,7 @@ add_action('graphql_init', function () {
         register_graphql_object_type('RedirectionRedirect', [
             'description' => __(
                 'The redirect',
-                'wp-graphql-redirection'
+                'add-wpgraphql-redirection'
             ),
             'fields' => [
                 'origin' => ['type' => 'String'],
@@ -76,7 +77,7 @@ add_action('graphql_init', function () {
         ]);
 
         register_graphql_object_type('RedirectionRedirects', [
-            'description' => __('The Redirects', 'wp-graphql-redirection'),
+            'description' => __('The Redirects', 'add-wpgraphql-redirection'),
             'fields' => [
                 'redirects' => ['type' => ['list_of' => 'RedirectionRedirect']],
             ],
@@ -90,7 +91,7 @@ add_action('graphql_init', function () {
                 'type' => 'RedirectionRedirects',
                 'description' => __(
                     'The redirects',
-                    'wp-graphql-redirection'
+                    'add-wpgraphql-redirection'
                 ),
                 'resolve' => function (
                     $post,
