@@ -7,7 +7,7 @@
  * Author:          Ash Hitchcock
  * Author URI:      https://www.ashleyhitchcock.com
  * Text Domain:     add-wpgraphql-redirection
- * Version:         0.0.4
+ * Version:         0.1.0
  * License:         GPLv2 or later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  *
@@ -101,12 +101,16 @@ add_action('graphql_init', function () {
 
                     global $wpdb;
 
-                    $sql = $wpdb->prepare(
-                        "SELECT {$wpdb->prefix}redirection_items.*, {$wpdb->prefix}redirection_groups.name FROM {$wpdb->prefix}redirection_items
+                    $cache_key = 'wpgraphql_redirection_items';
+                    $rows = wp_cache_get($cache_key);
+
+                    if (false === $rows) {
+                        $sql = "SELECT {$wpdb->prefix}redirection_items.*, {$wpdb->prefix}redirection_groups.name FROM {$wpdb->prefix}redirection_items
                                     INNER JOIN {$wpdb->prefix}redirection_groups ON {$wpdb->prefix}redirection_groups.id={$wpdb->prefix}redirection_items.group_id
-                                    ORDER BY {$wpdb->prefix}redirection_items.position"
-                    );
-                    $rows = $wpdb->get_results($sql);
+                                    ORDER BY {$wpdb->prefix}redirection_items.position";
+                        $rows = $wpdb->get_results($sql);
+                        wp_cache_set($cache_key, $rows);
+                    }
                     
                     $items = [];
                     
