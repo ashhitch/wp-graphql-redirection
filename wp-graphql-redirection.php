@@ -66,6 +66,7 @@ add_action('graphql_init', function () {
                 'add-wpgraphql-redirection'
             ),
             'fields' => [
+                'id' => ['type' => 'Int'],
                 'origin' => ['type' => 'String'],
                 'target' => ['type' => 'String'],
                 'type' => ['type' => 'String'],
@@ -116,6 +117,7 @@ add_action('graphql_init', function () {
                     
                     foreach ((array) $rows as $row) {
                         $items[] = [
+                            'id' => $row->id,
                             'origin' => $row->url,
                             'target' => $row->action_data,
                             'code' => absint($row->action_code),
